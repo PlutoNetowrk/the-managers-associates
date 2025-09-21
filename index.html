@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Managers and Associates | Financial & Legal Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('https://placehold.co/1920x1080/0a192f/ffffff?text=Modern+Office');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #3b82f6;
+            border-radius: 2px;
+        }
+        .faq-item summary {
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .faq-item summary:hover {
+            background-color: #f3f4f6;
+        }
+        .faq-item summary::marker {
+            content: '› ';
+            font-size: 1.5em;
+            color: #3b82f6;
+        }
+        .faq-item[open] summary::marker {
+            content: 'ˇ ';
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-left { opacity: 0; transform: translateX(-20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in-right { opacity: 0; transform: translateX(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .zoom-in { opacity: 0; transform: scale(0.95); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        
+        .is-visible {
+            opacity: 1;
+            transform: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900">The Managers & Associates</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#mission-vision" class="text-gray-600 hover:text-blue-500 transition duration-300">Mission & Vision</a>
+                <a href="#values" class="text-gray-600 hover:text-blue-500 transition duration-300">Our Values</a>
+                <a href="#why-us" class="text-gray-600 hover:text-blue-500 transition duration-300">Why Choose Us</a>
+                <a href="#faq" class="text-gray-600 hover:text-blue-500 transition duration-300">FAQ</a>
+                <a href="#contact" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">Contact Us</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#mission-vision" class="block py-2 text-gray-600 hover:text-blue-500">Mission & Vision</a>
+            <a href="#values" class="block py-2 text-gray-600 hover:text-blue-500">Our Values</a>
+            <a href="#why-us" class="block py-2 text-gray-600 hover:text-blue-500">Why Choose Us</a>
+            <a href="#faq" class="block py-2 text-gray-600 hover:text-blue-500">FAQ</a>
+            <a href="#contact" class="block mt-2 bg-blue-500 text-white text-center px-4 py-2 rounded-md hover:bg-blue-600">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-24 sm:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 fade-in-up">Clarity in Compliance. Confidence in Growth.</h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 fade-in-up" style="transition-delay: 150ms;">Integrated financial and legal expertise designed to empower your business and simplify your journey to success.</p>
+            <a href="#why-us" class="bg-blue-500 text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105 fade-in-up" style="transition-delay: 300ms;">Discover How</a>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mission-vision" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-left">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">“To empower businesses and individuals with seamless financial and legal solutions by blending expertise, technology, and trust. We are committed to delivering clarity in compliance, precision in accounting, and strength in legal advisory—helping our clients focus on growth while we manage the complexities.”</p>
+                </div>
+                <div class="fade-in-right" style="transition-delay: 150ms;">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">“To be recognized as a leading multidisciplinary firm that transforms the way businesses experience finance and law. By upholding ethics, innovation, and client-centric values, we aspire to create a future where compliance is simple, decisions are smarter, and partnerships are built on lasting confidence and integrity.”</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section id="values" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 section-title fade-in-up">Our Core Values</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-12 fade-in-up" style="transition-delay: 100ms;">The principles that guide our actions and define our commitment to you.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <!-- Value 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 zoom-in" style="transition-delay: 200ms;">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">1. Integrity First</h3>
+                    <p class="text-gray-600">We uphold honesty, transparency, and ethical practices in everything we do.</p>
+                </div>
+                <!-- Value 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 zoom-in" style="transition-delay: 300ms;">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">2. Client-Centric Approach</h3>
+                    <p class="text-gray-600">Every solution is tailored to create real value for our clients.</p>
+                </div>
+                <!-- Value 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 zoom-in" style="transition-delay: 400ms;">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">3. Excellence in Service</h3>
+                    <p class="text-gray-600">We strive for accuracy, innovation, and continuous improvement.</p>
+                </div>
+                <!-- Value 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 zoom-in" style="transition-delay: 500ms;">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">4. Confidentiality & Trust</h3>
+                    <p class="text-gray-600">Protecting client interests is at the heart of our practice.</p>
+                </div>
+                <!-- Value 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 zoom-in" style="transition-delay: 600ms;">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">5. Collaboration & Growth</h3>
+                    <p class="text-gray-600">We believe in teamwork, knowledge-sharing, and building lasting partnerships.</p>
+                </div>
+                <!-- Value 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 zoom-in" style="transition-delay: 700ms;">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">6. Innovation with Purpose</h3>
+                    <p class="text-gray-600">Using technology and creative strategies to simplify complex financial and legal challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-900 section-title fade-in-up">Why Choose Us</h2>
+            <p class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12 fade-in-up" style="transition-delay: 100ms;">We're not just advisors; we're partners in your progress. Here's what sets us apart.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="flex items-start space-x-4 fade-in-up">
+                    <div class="flex-shrink-0 text-blue-500 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Integrated Expertise</h3>
+                        <p class="text-gray-600">Combining Chartered Accountancy with Legal Advisory for a truly integrated solution.</p>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="flex items-start space-x-4 fade-in-up" style="transition-delay: 100ms;">
+                     <div class="flex-shrink-0 text-blue-500 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Trust Beyond Numbers</h3>
+                        <p class="text-gray-600">Building relationships founded on ethics, confidentiality, and lasting trust.</p>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="flex items-start space-x-4 fade-in-up" style="transition-delay: 200ms;">
+                    <div class="flex-shrink-0 text-blue-500 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Growth-Focused Advisory</h3>
+                        <p class="text-gray-600">We create strategic value to unlock opportunities and support long-term growth.</p>
+                    </div>
+                </div>
+                <!-- Feature 4 -->
+                <div class="flex items-start space-x-4 fade-in-up" style="transition-delay: 300ms;">
+                    <div class="flex-shrink-0 text-blue-500 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Innovation with Integrity</h3>
+                        <p class="text-gray-600">Embracing modern tools and smart practices without compromising on professional ethics.</p>
+                    </div>
+                </div>
+                <!-- Feature 5 -->
+                <div class="flex items-start space-x-4 fade-in-up" style="transition-delay: 400ms;">
+                     <div class="flex-shrink-0 text-blue-500 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.125-1.274-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.125-1.274.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Partners in Progress</h3>
+                        <p class="text-gray-600">We don't just serve clients—we collaborate with them at every stage of their journey.</p>
+                    </div>
+                </div>
+                <!-- Feature 6 -->
+                <div class="flex items-start space-x-4 fade-in-up" style="transition-delay: 500ms;">
+                     <div class="flex-shrink-0 text-blue-500 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h8a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.707 4.293a1 1 0 010 1.414L5.414 8l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L18.586 8l-2.293-2.293a1 1 0 010-1.414z" /></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Future-Ready Firm</h3>
+                        <p class="text-gray-600">Preparing clients not just for today’s challenges, but for tomorrow’s possibilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-900 section-title fade-in-up">Frequently Asked Questions</h2>
+            <p class="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-12 fade-in-up" style="transition-delay: 100ms;">Have questions? We have answers. Here are some common queries from our clients.</p>
+            <div class="max-w-4xl mx-auto space-y-4">
+                <details class="faq-item bg-white shadow-md rounded-lg p-5 fade-in-up" style="transition-delay: 200ms;">
+                    <summary class="font-semibold text-lg list-none">Q1. What services does The Managers and Associates provide?</summary>
+                    <p class="mt-3 text-gray-600">We provide end-to-end services in Taxation, GST, Income Tax Return (ITR) filing, Audits, Accounting, Company Incorporation, Business Advisory, Project Reports, and Legal Advisory (Corporate Law, Compliance & Contracts).</p>
+                </details>
+                <details class="faq-item bg-white shadow-md rounded-lg p-5 fade-in-up" style="transition-delay: 300ms;">
+                    <summary class="font-semibold text-lg list-none">Q2. Who can take your services?</summary>
+                    <p class="mt-3 text-gray-600">Our services are designed for individuals, startups, small businesses, NGOs, and large enterprises. Whether you need help with personal tax filing or complete business compliance, we cater to all.</p>
+                </details>
+                <details class="faq-item bg-white shadow-md rounded-lg p-5 fade-in-up" style="transition-delay: 400ms;">
+                    <summary class="font-semibold text-lg list-none">Q3. Why should I hire a CA firm instead of a local accountant?</summary>
+                    <p class="mt-3 text-gray-600">A CA firm provides professional expertise, legal compliance assurance, and strategic financial insights that go beyond bookkeeping. We ensure accuracy, reduce risk, and help businesses grow with confidence.</p>
+                </details>
+                <details class="faq-item bg-white shadow-md rounded-lg p-5 fade-in-up" style="transition-delay: 500ms;">
+                    <summary class="font-semibold text-lg list-none">Q4. Do you provide legal services along with accounting and tax?</summary>
+                    <p class="mt-3 text-gray-600">Yes. As a unique firm led by a Chartered Accountant and Advocate, we provide integrated CA + Legal solutions so clients don’t have to run between different advisors.</p>
+                </details>
+                 <details class="faq-item bg-white shadow-md rounded-lg p-5 fade-in-up" style="transition-delay: 600ms;">
+                    <summary class="font-semibold text-lg list-none">Q5. How do you ensure confidentiality of client information?</summary>
+                    <p class="mt-3 text-gray-600">Confidentiality and ethics are the foundation of our practice. All client data is handled with strict security and professional responsibility.</p>
+                </details>
+                <details class="faq-item bg-white shadow-md rounded-lg p-5 fade-in-up" style="transition-delay: 700ms;">
+                    <summary class="font-semibold text-lg list-none">Q6. Can you help in company registration and compliance?</summary>
+                    <p class="mt-3 text-gray-600">Absolutely. We handle Company Incorporation, ROC filings, Secretarial Compliance, and Business Setup Advisory for startups and businesses.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact" class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-6 text-center fade-in-up">
+            <h2 class="text-3xl font-bold mb-4">Ready to Grow Your Business?</h2>
+            <p class="text-gray-300 max-w-xl mx-auto mb-8">Let's connect. Reach out to us for a consultation and discover how our expertise can become your advantage.</p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-10">
+                <p class="text-lg"><strong>Email:</strong> contact@managersandassociates.com</p>
+                <p class="text-lg"><strong>Phone:</strong> +91 12345 67890</p>
+            </div>
+            <p class="text-gray-400">&copy; 2025 The Managers and Associates. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Fade-in animation on scroll
+        const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .zoom-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        animatedElements.forEach(element => {
+            appearOnScroll.observe(element);
+        });
+    </script>
+</body>
+</html>
+
